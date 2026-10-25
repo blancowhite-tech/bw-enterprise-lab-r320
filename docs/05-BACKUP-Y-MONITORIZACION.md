@@ -42,7 +42,7 @@ PBS añadido como storage en Proxmox:
 ### Recuperación de bw-pbs
 - No se hace backup de la VM completa: su disco contiene el datastore y respaldar backups dentro de backups no tiene sentido.
 - En su lugar, `pbs-config.md` guarda el hardware de la VM, `/etc/network/interfaces`, `datastore.cfg` y los pasos para reconstruirla.
-- **Por confirmar:** si la VM 130 está incluida o no en el job semanal (ver abajo). Este documento y `pbs-config.md` se contradicen: `03-MAQUINAS-VIRTUALES.md` y el changelog de este documento del 2026-10-06 la incluyen; `pbs-config.md` dice que no se respalda la VM completa.
+- Confirmado el 2026-10-25: la VM 130 **no** está en el job semanal. Coincide con `pbs-config.md`. La mención del changelog del 2026-10-06, que la incluía, era errónea.
 
 ---
 
@@ -58,7 +58,7 @@ PBS añadido como storage en Proxmox:
 | Campo | Valor |
 |---|---|
 | Frecuencia | Semanal, domingos 01:00 |
-| VMs incluidas | 100 (bw-infra-debian), 110 (bw-pfsense), 120 (bw-truenas), 130 (bw-pbs, por confirmar) |
+| VMs incluidas | 100 (bw-infra-debian), 110 (bw-pfsense), 120 (bw-truenas). La 130 (bw-pbs) no entra |
 | Retención | keep last 2 + daily 7 |
 | Destino | storage `pbs` |
 
@@ -122,3 +122,4 @@ La política anterior preveía backups diarios con retención 7/4/2 (o 7/4/1) pa
 | 2026-10-08 | EWC con copia local de configuración en bootflash (`EWC_backup_final.cfg`). |
 | 2026-10-24 | Documento revisado: backup del EWC fuera de PBS, prioridad de respaldar bw-winserver y contradicción sobre la VM 130 señalada. |
 | 2026-10-25 | Anotado que bw-tailscale (CT 105) no está en el job de backup. Arranque automático de 110, 105, 120, 130 y 100 configurado (ver `01-INFRAESTRUCTURA.md`). |
+| 2026-10-25 | Confirmado que la VM 130 (bw-pbs) no está en el job de backup. Corregidas las menciones contrarias. |

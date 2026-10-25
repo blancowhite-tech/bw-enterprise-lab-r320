@@ -123,7 +123,7 @@ Managed by **Proxmox Backup Server 4.2.1** (`bw-pbs`, VMID 130).
 | Item | Detail |
 |---|---|
 | Schedule | Weekly, Sundays 01:00 |
-| Guests in the job | 100 (bw-infra-debian), 110 (bw-pfsense), 120 (bw-truenas) — 130 to be confirmed |
+| Guests in the job | 100 (bw-infra-debian), 110 (bw-pfsense), 120 (bw-truenas). bw-pbs (130) is not in the job |
 | Retention | keep last 2 + daily 7 |
 | Not yet in the job | bw-winserver (150), bw-win11 (160), bw-tailscale (105) |
 | Outside PBS | Cisco EWC (not a VM) — local config copy in the AP's bootflash |

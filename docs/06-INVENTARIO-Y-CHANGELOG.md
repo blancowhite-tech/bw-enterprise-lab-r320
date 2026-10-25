@@ -240,7 +240,7 @@ El proyecto se documenta públicamente en LinkedIn como una serie por temporadas
 - Comprobación con `qm list`: VMs 100, 110, 120 y 130 en marcha; 150, 160 y 700 paradas.
 - Incidencia: el EWC no abría por `mywifi.cisco.com` porque el `hosts` del PC seguía apuntando a `192.168.1.195`. La IP correcta es `10.10.10.240`. El AP (`10.10.10.225`) no sirve web.
 - Documentación corregida (EWC, estado de VMs, PBS 4.2.1, inventarios).
-- Discrepancias detectadas y **por confirmar**: RAM y disco de bw-pfsense (`qm list`: 2 GB / 20 GB; documento: 4 GB / 32 GB), RAM de bw-winserver (`qm list`: 8 GB; documento: 4 GB), rango DHCP (`.200-.240` observado frente a `.200-.250`), y si la VM 130 está en el job de backup.
+- Discrepancias detectadas y **por confirmar**: RAM y disco de bw-pfsense (`qm list`: 2 GB / 20 GB; documento: 4 GB / 32 GB), RAM de bw-winserver (`qm list`: 8 GB; documento: 4 GB), rango DHCP (`.200-.240` observado frente a `.200-.250`). Resuelto el 2026-10-25: la VM 130 **no** está en el job de backup.
 
 ---
 

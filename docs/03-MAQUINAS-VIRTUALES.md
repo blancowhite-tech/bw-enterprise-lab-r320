@@ -79,7 +79,7 @@
 - IP migrada de `192.168.1.130` a `10.10.10.130` el 2026-09-01.
 - Storage `pbs` actualizado en Proxmox con nueva IP.
 - No se hace backup de la VM completa: el disco contiene el datastore. La recuperación se documenta en `pbs-config.md`.
-- Job de backup semanal los domingos a las 01:00 (keep last 2 + daily 7). Si la VM 130 está dentro del job es **por confirmar**: ver `05-BACKUP-Y-MONITORIZACION.md`.
+- Job de backup semanal los domingos a las 01:00 (keep last 2 + daily 7). La VM 130 **no** está en el job (confirmado el 2026-10-25).
 
 ---
 
